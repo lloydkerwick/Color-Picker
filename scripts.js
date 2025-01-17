@@ -2,7 +2,7 @@ function changeBackgroundColor() {
 
   const colorPicker = document.querySelector('.js-color-picker')
   const backgroundColorButton = document.querySelector('.js-change-bg-color');
-  const paragraph = document.querySelector('p')
+  const paragraphs = document.querySelectorAll('p')
 
   // converting hex to RGB
   // parseInt converts hex string to integer
@@ -26,11 +26,14 @@ function changeBackgroundColor() {
 
     document.body.style.backgroundColor = selectedColor;
 
-    if (brightness <128) {
-      paragraph.style.color = 'white'
-    } else {
-      paragraph.style.color = 'black'
-    }
+    // looping through each paragraph to adjust color
+    paragraphs.forEach(paragraph => {
+      if (brightness <128) {
+        paragraph.style.color = 'white'
+      } else {
+        paragraph.style.color = 'black'
+      }
+    })
   })
 }
 
