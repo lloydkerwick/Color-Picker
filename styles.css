@@ -1,0 +1,11 @@
+button {
+  cursor: pointer;
+  border: solid 2px black;
+  padding: 10px;
+}
+
+input {
+  cursor: pointer;
+  height: 40px;
+  width: 180px;
+}
