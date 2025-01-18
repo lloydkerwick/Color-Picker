@@ -21,12 +21,13 @@ function changeBackgroundColor() {
   }
 
   backgroundColorButton.addEventListener('click', () => {
-    const selectedColor = colorPicker.value;
-    const brightness = getBrightness(selectedColor);
+    const selectedHexColor = colorPicker.value;
+    const brightness = getBrightness(selectedHexColor);
 
-    document.body.style.backgroundColor = selectedColor;
+    document.body.style.backgroundColor = selectedHexColor;
 
     // looping through each paragraph to adjust color
+    // 128 is threshold for brightness
     paragraphs.forEach(paragraph => {
       if (brightness <128) {
         paragraph.style.color = 'white'
